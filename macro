@@ -1,0 +1,585 @@
+Option Explicit
+
+Sub Combinar()
+Dim Pregunta As Integer
+Dim NumCriterios As Integer, datos As Integer
+Dim CantDatos As Integer
+Dim NombreHoja As String
+Dim Variable1 As String, Variable2 As String, Variable3 As String, Variable4 As String
+Dim Variable5 As String, Variable6 As String, Variable7 As String, Variable8 As String
+Dim Variable9 As String, Variable10 As String, Variable11 As String, Variable12 As String
+Dim Variable13 As String, Variable14 As String, Variable15 As String, Variable16 As String
+Dim Variable17 As String, Variable18 As String, Variable19 As String, Variable20 As String
+Dim Variable21 As String, Variable22 As String, Variable23 As String, Variable24 As String
+Dim Variable25 As String, Variable26 As String, Variable27 As String, Variable28 As String
+Dim Variable29 As String, Variable30 As String, Variable31 As String, Variable32 As String
+Dim Variable33 As String, Variable34 As String, Variable35 As String, Variable36 As String
+Dim Variable37 As String, Variable38 As String, Variable39 As String, Variable40 As String
+Dim Variable41 As String, Variable42 As String, Variable43 As String, Variable44 As String
+Dim Variable45 As String, Variable46 As String, Variable47 As String, Variable48 As String
+Dim Variable49 As String, Variable50 As String, Variable51 As String, Variable52 As String
+Dim Variable53 As String, Variable54 As String, Variable55 As String, Variable56 As String
+Dim Variable57 As String, Variable58 As String, Variable59 As String, Variable60 As String
+Dim Variable61 As String, Variable62 As String, Variable63 As String, Variable64 As String
+Dim Variable65 As String, Variable66 As String, Variable67 As String, Variable68 As String
+Dim Variable69 As String, Variable70 As String, Variable71 As String, Variable72 As String
+Dim Variable73 As String, Variable74 As String, Variable75 As String, Variable76 As String
+Dim Variable77 As String, Variable78 As String, Variable79 As String, Variable80 As String
+Dim Variable81 As String, Variable82 As String, Variable83 As String, Variable84 As String
+Dim Variable85 As String, Variable86 As String, Variable87 As String, Variable88 As String
+Dim Variable89 As String, Variable90 As String, Variable91 As String, Variable92 As String
+Dim Variable93 As String, Variable94 As String, Variable95 As String, Variable96 As String
+Dim Variable97 As String, Variable98 As String, Variable99 As String
+Dim DiaF As Integer, MesF As Integer, AnoF As Integer
+Dim Dato1 As String, Dato2 As String, Dato3 As String, Dato4 As String
+Dim Dato5 As String, Dato6 As String, Dato7 As String, Dato8 As String
+Dim Dato9 As String, Dato10 As String, Dato11 As String, Dato12 As String
+Dim Dato13 As String, Dato14 As String, Dato15 As String, Dato16 As String
+Dim Dato17 As String, Dato18 As String, Dato19 As String, Dato20 As String
+Dim Dato21 As String, Dato22 As String, Dato23 As String, Dato24 As String
+Dim Dato25 As String, Dato26 As String, Dato27 As String, Dato28 As String
+Dim Dato29 As String, Dato30 As String, Dato31 As String, Dato32 As String
+Dim Dato33 As String, Dato34 As String, Dato35 As String, Dato36 As String
+Dim Dato37 As String, Dato38 As String, Dato39 As String, Dato40 As String
+Dim Dato41 As String, Dato42 As String, Dato43 As String, Dato44 As String
+Dim Dato45 As String, Dato46 As String, Dato47 As String, Dato48 As String
+Dim Dato49 As String, Dato50 As String, Dato51 As String, Dato52 As String
+Dim Dato53 As String, Dato54 As String, Dato55 As String, Dato56 As String
+Dim Dato57 As String, Dato58 As String, Dato59 As String, Dato60 As String
+Dim Dato61 As String, Dato62 As String, Dato63 As String, Dato64 As String
+Dim Dato65 As String, Dato66 As String, Dato67 As String, Dato68 As String
+Dim Dato69 As String, Dato70 As String, Dato71 As String, Dato72 As String
+Dim Dato73 As String, Dato74 As String, Dato75 As String, Dato76 As String
+Dim Dato77 As String, Dato78 As String, Dato79 As String, Dato80 As String
+Dim Dato81 As String, Dato82 As String, Dato83 As String, Dato84 As String
+Dim Dato85 As String, Dato86 As String, Dato87 As String, Dato88 As String
+Dim Dato89 As String, Dato90 As String, Dato91 As String, Dato92 As String
+Dim Dato93 As String, Dato94 As String, Dato95 As String, Dato96 As String
+Dim Dato97 As String, Dato98 As String, Dato99 As String
+
+Application.ScreenUpdating = False
+
+Pregunta = MsgBox("Deseas continuar", vbOKCancel + vbQuestion, "EJECUTAR CDI")
+
+    If Pregunta = 2 Then: Exit Sub
+      
+    Variable1 = Sheets("BDatos").Range("D1")
+    Variable2 = Sheets("BDatos").Range("B1")
+    Variable3 = Sheets("BDatos").Range("C1")
+    Variable4 = Sheets("BDatos").Range("E1")
+    Variable5 = Sheets("BDatos").Range("F1")
+    Variable6 = Sheets("BDatos").Range("G1")
+    Variable7 = Sheets("BDatos").Range("H1")
+    Variable8 = Sheets("BDatos").Range("I1")
+    Variable9 = Sheets("BDatos").Range("J1")
+    Variable10 = Sheets("BDatos").Range("K1")
+    Variable11 = Sheets("BDatos").Range("L1")
+    Variable12 = Sheets("BDatos").Range("M1")
+    Variable13 = Sheets("BDatos").Range("N1")
+    Variable14 = Sheets("BDatos").Range("O1")
+    Variable15 = Sheets("BDatos").Range("P1")
+    Variable16 = Sheets("BDatos").Range("Q1")
+    Variable17 = Sheets("BDatos").Range("R1")
+    Variable18 = Sheets("BDatos").Range("S1")
+    Variable19 = Sheets("BDatos").Range("T1")
+    Variable20 = Sheets("BDatos").Range("U1")
+    Variable21 = Sheets("BDatos").Range("V1")
+    Variable22 = Sheets("BDatos").Range("W1")
+    Variable23 = Sheets("BDatos").Range("X1")
+    Variable24 = Sheets("BDatos").Range("Y1")
+    Variable25 = Sheets("BDatos").Range("Z1")
+    Variable26 = Sheets("BDatos").Range("AA1")
+    Variable27 = Sheets("BDatos").Range("AB1")
+    Variable28 = Sheets("BDatos").Range("AC1")
+    Variable29 = Sheets("BDatos").Range("AD1")
+    Variable30 = Sheets("BDatos").Range("AE1")
+    Variable31 = Sheets("BDatos").Range("AF1")
+    Variable32 = Sheets("BDatos").Range("AG1")
+    Variable33 = Sheets("BDatos").Range("AH1")
+    Variable34 = Sheets("BDatos").Range("AI1")
+    Variable35 = Sheets("BDatos").Range("AJ1")
+    Variable36 = Sheets("BDatos").Range("AK1")
+    Variable37 = Sheets("BDatos").Range("AL1")
+    Variable38 = Sheets("BDatos").Range("AM1")
+    Variable39 = Sheets("BDatos").Range("AN1")
+    Variable40 = Sheets("BDatos").Range("AO1")
+    Variable41 = Sheets("BDatos").Range("AP1")
+    Variable42 = Sheets("BDatos").Range("AQ1")
+    Variable43 = Sheets("BDatos").Range("AR1")
+    Variable44 = Sheets("BDatos").Range("AS1")
+    Variable45 = Sheets("BDatos").Range("AT1")
+    Variable46 = Sheets("BDatos").Range("AU1")
+    Variable47 = Sheets("BDatos").Range("AV1")
+    Variable48 = Sheets("BDatos").Range("AW1")
+    Variable49 = Sheets("BDatos").Range("AX1")
+    Variable50 = Sheets("BDatos").Range("AY1")
+    Variable51 = Sheets("BDatos").Range("AZ1")
+    Variable52 = Sheets("BDatos").Range("BA1")
+    Variable53 = Sheets("BDatos").Range("BB1")
+    Variable54 = Sheets("BDatos").Range("BC1")
+    Variable55 = Sheets("BDatos").Range("BD1")
+    Variable56 = Sheets("BDatos").Range("BE1")
+    Variable57 = Sheets("BDatos").Range("BF1")
+    Variable58 = Sheets("BDatos").Range("BG1")
+    Variable59 = Sheets("BDatos").Range("BH1")
+    Variable60 = Sheets("BDatos").Range("BI1")
+    Variable61 = Sheets("BDatos").Range("BJ1")
+    Variable62 = Sheets("BDatos").Range("BK1")
+    Variable63 = Sheets("BDatos").Range("BL1")
+    Variable64 = Sheets("BDatos").Range("BM1")
+    Variable65 = Sheets("BDatos").Range("BN1")
+    Variable66 = Sheets("BDatos").Range("BO1")
+    Variable67 = Sheets("BDatos").Range("BP1")
+    Variable68 = Sheets("BDatos").Range("BQ1")
+    Variable69 = Sheets("BDatos").Range("BR1")
+    Variable70 = Sheets("BDatos").Range("BS1")
+    Variable71 = Sheets("BDatos").Range("BT1")
+    Variable72 = Sheets("BDatos").Range("BU1")
+    Variable73 = Sheets("BDatos").Range("BV1")
+    Variable74 = Sheets("BDatos").Range("BW1")
+    Variable75 = Sheets("BDatos").Range("BX1")
+    Variable76 = Sheets("BDatos").Range("BY1")
+    Variable77 = Sheets("BDatos").Range("BZ1")
+    Variable78 = Sheets("BDatos").Range("CA1")
+    Variable79 = Sheets("BDatos").Range("CB1")
+    Variable80 = Sheets("BDatos").Range("CC1")
+    Variable81 = Sheets("BDatos").Range("CD1")
+    Variable82 = Sheets("BDatos").Range("CE1")
+    Variable83 = Sheets("BDatos").Range("CF1")
+    Variable84 = Sheets("BDatos").Range("CG1")
+    Variable85 = Sheets("BDatos").Range("CH1")
+    Variable86 = Sheets("BDatos").Range("CI1")
+    Variable87 = Sheets("BDatos").Range("CJ1")
+    Variable88 = Sheets("BDatos").Range("CK1")
+    Variable89 = Sheets("BDatos").Range("CL1")
+    Variable90 = Sheets("BDatos").Range("CM1")
+    Variable91 = Sheets("BDatos").Range("CN1")
+    Variable92 = Sheets("BDatos").Range("CO1")
+    Variable93 = Sheets("BDatos").Range("CP1")
+    Variable94 = Sheets("BDatos").Range("CQ1")
+    Variable95 = Sheets("BDatos").Range("CR1")
+    Variable96 = Sheets("BDatos").Range("CS1")
+    Variable97 = Sheets("BDatos").Range("CT1")
+    Variable98 = Sheets("BDatos").Range("CU1")
+    Variable99 = Sheets("BDatos").Range("CV1")
+    
+
+    ' Contar el numero de datos
+    CantDatos = Sheets("BDatos").Cells(Rows.Count, "A").End(xlUp).Row
+    
+    For datos = 2 To CantDatos
+        Hoja1.Select
+        Hoja1.Copy Before:=Sheets(datos)
+        Sheets(datos).Name = "CDI-" & VBA.Right("00" & (datos - 1), 2)
+        
+    
+        
+        DiaF = VBA.Day(Sheets("BDatos").Range("D" & datos))
+        MesF = VBA.Month(Sheets("BDatos").Range("D" & datos))
+        AnoF = VBA.Year(Sheets("BDatos").Range("D" & datos))
+        
+               
+        Dato1 = VBA.Format(DateSerial(AnoF, MesF, DiaF), "yyyy/mm/dd")
+        Dato2 = Sheets("BDatos").Range("B" & datos)
+        Dato3 = Sheets("BDatos").Range("C" & datos)
+        Dato4 = Sheets("BDatos").Range("E" & datos)
+        Dato5 = Sheets("BDatos").Range("F" & datos)
+        Dato6 = Sheets("BDatos").Range("G" & datos)
+        Dato7 = Sheets("BDatos").Range("H" & datos)
+        Dato8 = Sheets("BDatos").Range("I" & datos)
+        Dato9 = Sheets("BDatos").Range("J" & datos)
+        Dato10 = Sheets("BDatos").Range("K" & datos)
+        Dato11 = Sheets("BDatos").Range("L" & datos)
+        Dato12 = Sheets("BDatos").Range("M" & datos)
+        Dato13 = Sheets("BDatos").Range("N" & datos)
+        Dato14 = Sheets("BDatos").Range("O" & datos)
+        Dato15 = Sheets("BDatos").Range("P" & datos)
+        Dato16 = Sheets("BDatos").Range("Q" & datos)
+        Dato17 = Sheets("BDatos").Range("R" & datos)
+        Dato18 = Sheets("BDatos").Range("S" & datos)
+        Dato19 = Sheets("BDatos").Range("T" & datos)
+        Dato20 = Sheets("BDatos").Range("U" & datos)
+        Dato21 = Sheets("BDatos").Range("V" & datos)
+        Dato22 = Sheets("BDatos").Range("W" & datos)
+        Dato23 = Sheets("BDatos").Range("X" & datos)
+        Dato24 = Sheets("BDatos").Range("Y" & datos)
+        Dato25 = Sheets("BDatos").Range("Z" & datos)
+        Dato26 = Sheets("BDatos").Range("AA" & datos)
+        Dato27 = Sheets("BDatos").Range("AB" & datos)
+        Dato28 = Sheets("BDatos").Range("AC" & datos)
+        Dato29 = Sheets("BDatos").Range("AD" & datos)
+        Dato30 = Sheets("BDatos").Range("AE" & datos)
+        Dato31 = Sheets("BDatos").Range("AF" & datos)
+        Dato32 = Sheets("BDatos").Range("AG" & datos)
+        Dato33 = Sheets("BDatos").Range("AH" & datos)
+        Dato34 = Sheets("BDatos").Range("AI" & datos)
+        Dato35 = Sheets("BDatos").Range("AJ" & datos)
+        Dato36 = Sheets("BDatos").Range("AK" & datos)
+        Dato37 = Sheets("BDatos").Range("AL" & datos)
+        Dato38 = Sheets("BDatos").Range("AM" & datos)
+        Dato39 = Sheets("BDatos").Range("AN" & datos)
+        Dato40 = Sheets("BDatos").Range("AO" & datos)
+        Dato41 = Sheets("BDatos").Range("AP" & datos)
+        Dato42 = Sheets("BDatos").Range("AQ" & datos)
+        Dato43 = Sheets("BDatos").Range("AR" & datos)
+        Dato44 = Sheets("BDatos").Range("AS" & datos)
+        Dato45 = Sheets("BDatos").Range("AT" & datos)
+        Dato46 = Sheets("BDatos").Range("AU" & datos)
+        Dato47 = Sheets("BDatos").Range("AV" & datos)
+        Dato48 = Sheets("BDatos").Range("AW" & datos)
+        Dato49 = Sheets("BDatos").Range("AX" & datos)
+        Dato50 = Sheets("BDatos").Range("AY" & datos)
+        Dato51 = Sheets("BDatos").Range("AZ" & datos)
+        Dato52 = Sheets("BDatos").Range("BA" & datos)
+        Dato53 = Sheets("BDatos").Range("BB" & datos)
+        Dato54 = Sheets("BDatos").Range("BC" & datos)
+        Dato55 = Sheets("BDatos").Range("BD" & datos)
+        Dato56 = Sheets("BDatos").Range("BE" & datos)
+        Dato57 = Sheets("BDatos").Range("BF" & datos)
+        Dato58 = Sheets("BDatos").Range("BG" & datos)
+        Dato59 = Sheets("BDatos").Range("BH" & datos)
+        Dato60 = Sheets("BDatos").Range("BI" & datos)
+        Dato61 = Sheets("BDatos").Range("BJ" & datos)
+        Dato62 = Sheets("BDatos").Range("BK" & datos)
+        Dato63 = Sheets("BDatos").Range("BL" & datos)
+        Dato64 = Sheets("BDatos").Range("BM" & datos)
+        Dato65 = Sheets("BDatos").Range("BN" & datos)
+        Dato66 = Sheets("BDatos").Range("BO" & datos)
+        Dato67 = Sheets("BDatos").Range("BP" & datos)
+        Dato68 = Sheets("BDatos").Range("BQ" & datos)
+        Dato69 = Sheets("BDatos").Range("BR" & datos)
+        Dato70 = Sheets("BDatos").Range("BS" & datos)
+        Dato71 = Sheets("BDatos").Range("BT" & datos)
+        Dato72 = Sheets("BDatos").Range("BU" & datos)
+        Dato73 = Sheets("BDatos").Range("BV" & datos)
+        Dato74 = Sheets("BDatos").Range("BW" & datos)
+        Dato75 = Sheets("BDatos").Range("BX" & datos)
+        Dato76 = Sheets("BDatos").Range("BY" & datos)
+        Dato77 = Sheets("BDatos").Range("BZ" & datos)
+        Dato78 = Sheets("BDatos").Range("CA" & datos)
+        Dato79 = Sheets("BDatos").Range("CB" & datos)
+        Dato80 = Sheets("BDatos").Range("CC" & datos)
+        Dato81 = Sheets("BDatos").Range("CD" & datos)
+        Dato82 = Sheets("BDatos").Range("CE" & datos)
+        Dato83 = Sheets("BDatos").Range("CF" & datos)
+        Dato84 = Sheets("BDatos").Range("CG" & datos)
+        Dato85 = Sheets("BDatos").Range("CH" & datos)
+        Dato86 = Sheets("BDatos").Range("CI" & datos)
+        Dato87 = Sheets("BDatos").Range("CJ" & datos)
+        Dato88 = Sheets("BDatos").Range("CK" & datos)
+        Dato89 = Sheets("BDatos").Range("CL" & datos)
+        Dato90 = Sheets("BDatos").Range("CM" & datos)
+        Dato91 = Sheets("BDatos").Range("CN" & datos)
+        Dato92 = Sheets("BDatos").Range("CO" & datos)
+        Dato93 = Sheets("BDatos").Range("CP" & datos)
+        Dato94 = Sheets("BDatos").Range("CQ" & datos)
+        Dato95 = Sheets("BDatos").Range("CR" & datos)
+        Dato96 = Sheets("BDatos").Range("CS" & datos)
+        Dato97 = Sheets("BDatos").Range("CT" & datos)
+        Dato98 = Sheets("BDatos").Range("CU" & datos)
+        Dato99 = Sheets("BDatos").Range("CV" & datos)
+               
+        
+        Cells.Replace What:="<" & Variable1 & ">", Replacement:=Dato1, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable2 & ">", Replacement:=Dato2, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable3 & ">", Replacement:=Dato3, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable4 & ">", Replacement:=Dato4, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable5 & ">", Replacement:=Dato5, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable6 & ">", Replacement:=Dato6, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable7 & ">", Replacement:=Dato7, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable8 & ">", Replacement:=Dato8, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable9 & ">", Replacement:=Dato9, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable10 & ">", Replacement:=Dato10, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable11 & ">", Replacement:=Dato11, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable12 & ">", Replacement:=Dato12, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable13 & ">", Replacement:=Dato13, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable14 & ">", Replacement:=Dato14, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable15 & ">", Replacement:=Dato15, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable16 & ">", Replacement:=Dato16, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable17 & ">", Replacement:=Dato17, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable18 & ">", Replacement:=Dato18, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable19 & ">", Replacement:=Dato19, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable20 & ">", Replacement:=Dato20, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable21 & ">", Replacement:=Dato21, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable22 & ">", Replacement:=Dato22, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable23 & ">", Replacement:=Dato23, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable24 & ">", Replacement:=Dato24, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable25 & ">", Replacement:=Dato25, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable26 & ">", Replacement:=Dato26, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable27 & ">", Replacement:=Dato27, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable28 & ">", Replacement:=Dato28, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable29 & ">", Replacement:=Dato29, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable30 & ">", Replacement:=Dato30, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable31 & ">", Replacement:=Dato31, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable32 & ">", Replacement:=Dato32, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+         Cells.Replace What:="<" & Variable33 & ">", Replacement:=Dato33, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable34 & ">", Replacement:=Dato34, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable35 & ">", Replacement:=Dato35, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable36 & ">", Replacement:=Dato36, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable37 & ">", Replacement:=Dato37, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable38 & ">", Replacement:=Dato38, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable39 & ">", Replacement:=Dato39, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable40 & ">", Replacement:=Dato40, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable41 & ">", Replacement:=Dato41, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable42 & ">", Replacement:=Dato42, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable43 & ">", Replacement:=Dato43, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable44 & ">", Replacement:=Dato44, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable45 & ">", Replacement:=Dato45, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable46 & ">", Replacement:=Dato46, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable47 & ">", Replacement:=Dato47, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable48 & ">", Replacement:=Dato48, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable49 & ">", Replacement:=Dato49, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable50 & ">", Replacement:=Dato50, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable51 & ">", Replacement:=Dato51, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable52 & ">", Replacement:=Dato52, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable53 & ">", Replacement:=Dato53, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable54 & ">", Replacement:=Dato54, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable55 & ">", Replacement:=Dato55, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable56 & ">", Replacement:=Dato56, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable57 & ">", Replacement:=Dato57, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable58 & ">", Replacement:=Dato58, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable59 & ">", Replacement:=Dato59, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable60 & ">", Replacement:=Dato60, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable61 & ">", Replacement:=Dato61, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable62 & ">", Replacement:=Dato62, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable63 & ">", Replacement:=Dato63, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable64 & ">", Replacement:=Dato64, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable65 & ">", Replacement:=Dato65, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable66 & ">", Replacement:=Dato66, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable67 & ">", Replacement:=Dato67, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable68 & ">", Replacement:=Dato68, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable69 & ">", Replacement:=Dato69, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable70 & ">", Replacement:=Dato70, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable71 & ">", Replacement:=Dato71, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable72 & ">", Replacement:=Dato72, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable73 & ">", Replacement:=Dato73, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable74 & ">", Replacement:=Dato74, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable75 & ">", Replacement:=Dato75, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable76 & ">", Replacement:=Dato76, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable77 & ">", Replacement:=Dato77, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable78 & ">", Replacement:=Dato78, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable79 & ">", Replacement:=Dato79, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable80 & ">", Replacement:=Dato80, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable81 & ">", Replacement:=Dato81, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable82 & ">", Replacement:=Dato82, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable83 & ">", Replacement:=Dato83, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable84 & ">", Replacement:=Dato84, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable85 & ">", Replacement:=Dato85, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable86 & ">", Replacement:=Dato86, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable87 & ">", Replacement:=Dato87, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable88 & ">", Replacement:=Dato88, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable89 & ">", Replacement:=Dato89, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable90 & ">", Replacement:=Dato90, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable91 & ">", Replacement:=Dato91, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable92 & ">", Replacement:=Dato92, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable93 & ">", Replacement:=Dato93, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable94 & ">", Replacement:=Dato94, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable95 & ">", Replacement:=Dato95, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable96 & ">", Replacement:=Dato96, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable97 & ">", Replacement:=Dato97, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable98 & ">", Replacement:=Dato98, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+        Cells.Replace What:="<" & Variable99 & ">", Replacement:=Dato99, LookAt:=xlPart, _
+            SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+            ReplaceFormat:=False
+
+   Next datos
+    
+Application.ScreenUpdating = True
+
+End Sub
